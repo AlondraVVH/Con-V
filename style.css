@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    font-family: 'Comic Sans MS', sans-serif; /* Fuente divertida */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fdfdfd; /* Fondo blanco */
+    overflow: hidden;
+    color: #333;
+    position: relative; /* Necesario para posicionar las imágenes flotantes */
+    margin: 0;
+}
+
+/* Contenedor que contiene el contador */
+.container {
+    position: relative; /* Necesario para posicionar imágenes dentro del contador */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Mensaje interactivo */
+#interactiveMessage {
+    font-size: 2em;
+    color: #f1c232; /* Amarillo para un toque alegre */
+    text-align: center;
+}
+
+/* Contador */
+.counter {
+    font-size: 2em;
+    color: #ff3366; /* Rojo para el estilo de Snoopy */
+    text-align: center;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+/* Flexbox para el contador */
+#timerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaciado entre los números */
+}
+
+/* Estilo para cada unidad de tiempo */
+/* Contenedor de cada unidad de tiempo */
+.time-unit {
+    display: flex;
+    flex-direction: column;  /* Apila elementos verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    margin: 0 15px;          /* Espacio entre unidades */
+}
+
+/* Número grande arriba */
+.time-unit .number {
+    font-size: 2em;          /* Tamaño destacado */
+    color: #444341;          /* Color rojo de Snoopy */
+    font-weight: bold;       /* Negrita */
+}
+
+/* Texto debajo */
+.time-unit .label {
+    font-size: 0.8em;        /* Tamaño más pequeño */
+    color: #333;             /* Color oscuro para contraste */
+
+}
+
+/* Galería de imágenes */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+/* Imágenes de Snoopy flotantes */
+.snoopy-image, .additional-image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: transform 0.5s ease;
+}
+
+/* Posiciones de las imágenes adicionales */
+.image-1 {
+    top: 30%;
+    left: 5%;
+    transform: rotate(15deg);
+}
+
+.image-2 {
+    top: 20%;
+    right: 10%;
+    transform: rotate(-5deg);
+}
+
+.image-3 {
+    bottom: 25%;
+    left: 45%;
+    transform: rotate(10deg);
+}
+
+/* Posiciones de las imágenes de Snoopy */
+.snoopy-1 {
+    top: 20%;
+    left: 20%;
+    transform: rotate(10deg);
+}
+
+.snoopy-2 {
+    top: 25%;
+    right: 50%;
+    transform: rotate(-5deg);
+}
+
+.snoopy-3 {
+    top: 70%;
+    left: 10%;
+    transform: rotate(5deg);
+}
+
+.snoopy-4 {
+    bottom: 15%;
+    left: 60%;
+    transform: rotate(-15deg);
+}
+
+.snoopy-5 {
+    bottom: 20%;
+    right: 5%;
+    transform: rotate(20deg);
+}
+
+.snoopy-6 {
+    top: 30%;
+    left: 55%;
+    transform: rotate(30deg);
+}
+
+.snoopy-7 {
+    bottom: 25%;
+    left: 30%;
+    transform: rotate(0deg);
+}
+
+.snoopy-8 {
+    top: 30%;
+    right: 25%;
+    transform: rotate(-20deg);
+}
+
+.snoopy-9 {
+    top: 30%;
+    right: 65%;
+    transform: rotate(-20deg);
+}
+
+/* Efectos al pasar el mouse */
+.snoopy-image:hover, .additional-image:hover {
+    transform: scale(1.1) rotate(0deg); /* Al pasar el mouse, las imágenes se agrandan */
+}
+
+/* Efecto de fade-in */
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
