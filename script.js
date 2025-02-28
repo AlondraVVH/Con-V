@@ -1,5 +1,5 @@
 function updateTimer() {
-    const startDate = new Date("2024-05-23T16:30:00");
+    const startDate = new Date("2024-04-23T16:30:00");
     const now = new Date();
 
     // Calcular diferencia de tiempo
